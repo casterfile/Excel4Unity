@@ -124,7 +124,7 @@ public class ExcelDeserializer {
 		{
 			//			Debug.LogError ("no change " + table.TableName + ".cs");
 		}
-        AssetDatabase.Refresh();
+        //AssetDatabase.Refresh();
 		return true;
 	}
 }

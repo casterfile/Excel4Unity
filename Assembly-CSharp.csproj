@@ -262,11 +262,11 @@
     <Reference Include="UnityEditor">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
-    <Reference Include="LitJson">
-      <HintPath>G:/freelance/sdktest/Excel4Unity/Assets/Plugins/LitJson.dll</HintPath>
-    </Reference>
     <Reference Include="EPPlus">
       <HintPath>G:/freelance/sdktest/Excel4Unity/Assets/Excel4Unity/EPPlus/EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="LitJson">
+      <HintPath>G:/freelance/sdktest/Excel4Unity/Assets/Plugins/LitJson.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

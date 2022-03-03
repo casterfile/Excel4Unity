@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,11 +8,13 @@ public class ReadLogin : MonoBehaviour
     List<string> ExcelData = new List<string>();
     [SerializeField] InputField username;
     [SerializeField] InputField password;
+    [SerializeField] Text Output;
     // Start is called before the first frame update
     void Start()
     { 
-        username.text = "test @gmail.com";
-        password.text = "_seav123";
+        username.text = "test@gmail.com";
+        password.text = "seav123";
+        Output.text = "";
     }
 
     // Update is called once per frame
@@ -24,6 +27,14 @@ public class ReadLogin : MonoBehaviour
     {
         Read();
         Validation();
+        if (Validation())
+        {
+            Output.text = "Successful Login";
+        }
+        else
+        {
+            Output.text = "Failed Login";
+        }
     }
 
     void Read()
@@ -41,21 +52,28 @@ public class ReadLogin : MonoBehaviour
         }
     }
 
-    void Validation()
+    bool Validation()
     {
+        bool istrue = false;
         for (int x = 0; x < ExcelData.Count; x++)
         {
             if(ExcelData[x].Length > 2)
             {
-                print("ExcelData: " + ExcelData[x]);
+                //print("ExcelData: " + ExcelData[x]);
+                //print("X: " + x);
                 string data = ExcelData[x];
                 string[] column = data.Split(char.Parse("¶"));
-                if (username.text == column[2] && password.text == column[3])
+
+                string newUsername = column[2].Replace(" ", String.Empty);
+                string newPassword = column[3].Replace(" ", String.Empty);
+                if (username.text == newUsername && password.text == newPassword)
                 {
-                    print("column[2]: " + column[2] + " || column[3]:" + column[3]);
+                    istrue = true;
                 }
             }
             
         }
+        
+        return istrue;
     }
 }
