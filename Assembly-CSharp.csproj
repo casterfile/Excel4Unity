@@ -73,6 +73,7 @@
     <Compile Include="Assets\Excel4Unity\Scripts\Model\DataItem.cs" />
     <Compile Include="Assets\Excel4Unity\Scripts\Model\TestItem.cs" />
     <Compile Include="Assets\Excel4Unity\Scripts\Model\sheet2Item.cs" />
+    <Compile Include="Assets\_MyAsset\_Script\ReadLogin.cs" />
     <Compile Include="Assets\_MyAsset\_Script\Test.cs" />
     <None Include="Assets\Excel4Unity\DataItem.txt" />
     <None Include="Assets\Excel4Unity\EPPlus\readme.txt" />

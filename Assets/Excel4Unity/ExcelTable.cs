@@ -5,6 +5,7 @@ using OfficeOpenXml;
 
 public class ExcelTable
 {
+    public static string excelData = "";
     private Dictionary <int, Dictionary<int, ExcelTableCell>> cells = new Dictionary<int, Dictionary<int, ExcelTableCell>>();
 
     public string TableName;
@@ -132,11 +133,12 @@ public class ExcelTable
         {
             for (int column = 1; column <= NumberOfColumns; column++)
             {
-                msg += string.Format("{0} ", GetValue(row, column));
+                msg += string.Format("{0} ¶", GetValue(row, column));
             }
-            msg += "\n";
+            msg += "†\n";
         }
         Debug.Log(msg);
+        excelData = msg;
     }
 
 
